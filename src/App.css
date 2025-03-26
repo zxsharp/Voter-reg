@@ -1,0 +1,45 @@
+.webcam-registration {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.webcam-container {
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.capture-button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.capture-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc3545;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffe6e6;
+  border-radius: 4px;
+}
+
+.success-message {
+  color: #28a745;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #e6ffe6;
+  border-radius: 4px;
+}
