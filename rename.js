@@ -30,9 +30,19 @@ app.post('/api/id-reg', (req, res) => {
 
   try {
     // Simulate processing delay
-    return res.status(400).json({
-        error: 'Invalid image data. Please take a clear photo.'
+    setTimeout(() => {
+      // Generate a random VID number
+      const vidNumber = 'VID' + Math.floor(100000 + Math.random() * 900000);
+      
+      // Store the vidNumber and image for later verification
+      registrations.set(vidNumber, {
+        idImage: image,
+        timestamp: new Date().toISOString(),
+        faceVerified: false 
       });
+
+      res.json({ vidNumber });
+    }, 1500);
   } catch (error) {
     res.status(500).json({
       error: 'Server error processing ID image. Please try again.'
